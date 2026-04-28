@@ -41,7 +41,7 @@ function showStart() {
     <section class="card scanline start">
       <div class="glow-blob" style="top:-6rem;right:-6rem;width:16rem;height:16rem;background:hsl(162 84% 51% / .2)"></div>
       <div class="glow-blob" style="bottom:-6rem;left:-6rem;width:16rem;height:16rem;background:hsl(152 100% 73% / .2)"></div>
-      <span class="pill">✨ Matemática Discreta · Ensino Médio</span>
+      <span class="pill">Matemática Discreta · Ensino Médio</span>
       <h1><span class="glow">Math</span> Quiz</h1>
       <p class="lead">
         O quiz que disfarça matemática de feed.
@@ -50,9 +50,9 @@ function showStart() {
         dentro do mundo das redes sociais.
       </p>
       <div class="features">
-        <div class="feature"><div class="ico">🧠</div><p>Adição & Mult.</p></div>
-        <div class="feature"><div class="ico">🎯</div><p>Casa dos Pombos</p></div>
-        <div class="feature"><div class="ico">⚡</div><p>União de Conj.</p></div>
+        <div class="feature"><div class="ico">🧠</div><p>Adição e Multiplicação</p></div>
+        <div class="feature"><div class="ico">🕊️</div><p>Casa dos Pombos</p></div>
+        <div class="feature"><div class="ico">🤝</div><p>União de Conjuntos</p></div>
       </div>
       <button class="btn lg" id="startBtn">▶ Começar partida</button>
       <p class="meta">10 fases · ⏱ 60s por questão · explicação após cada resposta</p>
@@ -81,7 +81,6 @@ function showQuestion() {
   const total = game.deck.length;
   const progressPct = (game.index / total) * 100;
 
-  // Renderiza UMA vez. O timer NÃO reescreve isso.
   app.innerHTML = `
     <div class="quiz-wrap">
       <div class="hud">
@@ -126,7 +125,7 @@ function showQuestion() {
     btn.addEventListener("click", () => answerSelected(Number(btn.dataset.i)));
   });
 
-  // Inicia o timer (apenas atualiza chip e barra, sem re-render)
+  // Inicia o timer
   clearTimer();
   game.timerId = setInterval(tick, 1000);
 }

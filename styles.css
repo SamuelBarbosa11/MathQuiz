@@ -89,8 +89,7 @@ main::after {
   overflow: hidden;
   z-index: 2;
 }
-/* Anima a entrada apenas em telas que aparecem "do zero" (start, result),
-   não a cada questão — evita o flicker. */
+
 .card.start, .card.result, .quiz-wrap {
   animation: fadeInUp .45s ease-out;
 }
